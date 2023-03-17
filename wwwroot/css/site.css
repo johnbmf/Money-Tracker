@@ -1,0 +1,110 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: "Inter";
+}
+
+*:not(.fa-solid):not(.fa):not(.e-icons) {
+    font-family: "Inter";
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #12161f;
+  color:#ffffff;
+}
+
+/*Radio btn group*/
+.e-btn-group.custom-rbt-group{
+    width: 100%;
+}
+
+.e-btn-group.custom-rbt-group .e-btn{
+    width: 50%;
+}
+
+.custom-rbt-group label.e-btn{
+    box-shadow: none !important;
+    border: 1px solid #fff;
+    background-color: rgb(34 43 51);
+    color: #fff;
+}
+
+.e-btn-group.custom-rbt-group input:checked + label.e-btn{
+    background-color: #fff;
+    color: #212b36;
+    border: 1px solid #fff;
+}
+
+/*Widget: Fondo de forms*/
+.widget {
+    border-radius: 1em;
+    background-color: #1a222b;
+}
+
+    .widget.summary > div:first-child{
+        background-color: #222b33;
+        padding: 1rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+        .widget.summary > div:first-child i {
+            font-weight: bold;
+        }
+
+    .widget.ingreso > div:first-child{
+        color: #65da41;
+    }
+
+    .widget.egreso > div:first-child {
+        color: #ff4e48;
+    }
+
+    .widget.balance > div:first-child {
+        color: #2aa1ff;
+    }
+
+    .widget.chart {
+        padding: 5px;
+    }
+
+/*Button*/
+.btn:focus, .btn:active {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/*Breadcrumb*/
+.e-breadcrumb a, .e-breadcrumb a:hover{
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+/*Links*/
+.no-a-decoration, .no-a-decoration:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*Main-Content*/
+.main-content {
+    margin-left : 290px;
+}
+
+/*SideBar*/
+#sideBar {
+    background-color: #12161d;
+    border-right: 1px dashed rgba(75, 82, 85, 0.24);
+    padding: 10px 20px;
+}

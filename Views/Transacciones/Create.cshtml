@@ -1,0 +1,41 @@
+﻿@model Money_Tracker.Models.Transaccion
+
+@{
+    ViewData["PageTitle"] = "Nueva Transacción";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="widget p-5">
+            <h2>Nueva Transacción</h2>
+            <hr class="mb-3" />
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <ejs-datepicker id="transaccionFecha" ejs-for="transaccionFecha" placeholder="Fecha de la transacción" floatLabelType="Always" format="dd-MM-yyyy"></ejs-datepicker>
+                    <span asp-validation-for="transaccionFecha" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <ejs-dropdownlist id="categoriaId" ejs-for="categoriaID" dataSource="@ViewBag.Categorias" placeholder="Categoría" floatLabelType="Always" allowFiltering="true" ignoreAccent="true" filterType="Contains">
+                        <e-dropdownlist-fields value="categoriaId" text="categoriaIconoNombre"></e-dropdownlist-fields> 
+                    </ejs-dropdownlist>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox id="transaccionDescripcion" ejs-for=transaccionDescripcion placeholder="Descripción..." floatLabelType="Always" multiline="true" maxlength="100"></ejs-textbox>
+                    <span asp-validation-for="transaccionDescripcion" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <ejs-numerictextbox id="transaccionMonto" ejs-for="transaccionMonto" placeholder="Monto $" floatLabelType="Always" min="0" format="### ### ###" value="0"></ejs-numerictextbox>           
+                    <span asp-validation-for="transaccionMonto" class="text-danger"></span>
+                </div>
+                <ejs-button id="submit" type="submit" content="Crear" cssClass="e-success"></ejs-button>
+            </form>
+            <!-- <a asp-action="Index">Back to List</a> -->
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

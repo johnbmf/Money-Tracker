@@ -1,0 +1,44 @@
+﻿@model Money_Tracker.Models.Categoria
+
+@{
+    ViewData["PageTitle"] = "Editar Categoría";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="widget p-5">
+            <h2>Editar categoría</h2>
+            <hr class="mb-3" />
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="categoriaId" />
+                <div class="mb-3">
+                    <div class='e-btn-group custom-rbt-group'>
+                        <input type="radio" id="categoriaTipoIngreso" name="categoriaTipo" value="Ingreso" checked="@(Model.categoriaTipo=="Ingreso")" />
+                        <label class="e-btn" for="categoriaTipoIngreso">Ingreso</label>
+                        <input type="radio" id="categoriaTipoEgreso" name="categoriaTipo" value="Egreso" checked="@(Model.categoriaTipo=="Egreso")" />
+                        <label class="e-btn" for="categoriaTipoEgreso">Egreso</label>
+                    </div>
+                    <span asp-validation-for="categoriaTipo" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox id="categoriaNombre" ejs-for=categoriaNombre placeholder="Nombre de la categoría" floatLabelType="Always"></ejs-textbox>
+                    <span asp-validation-for="categoriaNombre" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox id="categoriaIcono" ejs-for=categoriaIcono placeholder="Icono de la categoría" floatLabelType="Always"></ejs-textbox>
+                    <span asp-validation-for="categoriaIcono" class="text-danger"></span>
+                </div>
+                <ejs-button id="submit" type="submit" content="Editar" cssClass="e-success"></ejs-button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
