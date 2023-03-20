@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\Money Tracker\\Money Tracker.csproj": {}
+    "D:\\repos\\Money-Tracker\\Money Tracker.csproj": {}
   },
   "projects": {
-    "D:\\repos\\Money Tracker\\Money Tracker.csproj": {
+    "D:\\repos\\Money-Tracker\\Money Tracker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\Money Tracker\\Money Tracker.csproj",
+        "projectUniqueName": "D:\\repos\\Money-Tracker\\Money Tracker.csproj",
         "projectName": "Money Tracker",
-        "projectPath": "D:\\repos\\Money Tracker\\Money Tracker.csproj",
-        "packagesPath": "C:\\Users\\johnb\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\Money Tracker\\obj\\",
+        "projectPath": "D:\\repos\\Money-Tracker\\Money Tracker.csproj",
+        "packagesPath": "C:\\Users\\Jonathan\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\Money-Tracker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\johnb\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jonathan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
